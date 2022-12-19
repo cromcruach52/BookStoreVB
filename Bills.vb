@@ -83,7 +83,7 @@ Public Class Bills
         billDGV.DrawToBitmap(bm, New Rectangle(0, 0, Me.billDGV.Width, Me.billDGV.Height))
         e.Graphics.DrawImage(bm, 60, 120)
         e.Graphics.DrawString("Total Amount Php " + GrdTotal.ToString, New Font("Century Gothic", 15), Brushes.MidnightBlue, 280, 500)
-        e.Graphics.DrawString("========Thanks For Buying In Our Shop===========" + GrdTotal.ToString, New Font("Century Gothic", 15), Brushes.Crimson, 150, 580)
+        e.Graphics.DrawString("========Thanks For Buying Raymer's Bookstore===========" + GrdTotal.ToString, New Font("Century Gothic", 15), Brushes.Crimson, 150, 580)
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
@@ -112,8 +112,20 @@ Public Class Bills
 
     End Sub
 
+    Private Sub billDGV_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles billDGV.CellContentClick
 
+    End Sub
 
+    Private Sub Panel6_Paint(sender As Object, e As PaintEventArgs) Handles Panel6.Paint
+
+    End Sub
+
+    Private Sub Label13_Click(sender As Object, e As EventArgs) Handles Label13.Click
+        Dim Obj = New Login()
+        Obj.Show()
+        Me.Hide()
+
+    End Sub
 
     Private Sub bookDGV_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles bookDGV.CellContentClick
         Dim row As DataGridViewRow = bookDGV.Rows(e.RowIndex)
